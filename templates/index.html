@@ -44,14 +44,9 @@
             <div class="container d-flex justify-content-center justify-content-md-between">
                 <div class="contact-info d-flex align-items-center">
                     <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:energoshin@gmail.com">energoshin@gmail.com</a></i>
-                    <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+                    <i class="bi bi-phone d-flex align-items-center ms-4"><span>098044141</span></i>
                 </div>
-                <div class="social-links d-none d-md-flex align-items-center">
-                    <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                </div>
+
             </div>
         </div><!-- End Top Bar -->
 
@@ -73,6 +68,8 @@
                         <!-- Language Switcher Buttons -->
                         <li><a href="{{ url_for('change_language', language='en') }}">English</a></li>
                         <li><a href="{{ url_for('change_language', language='hy') }}">Հայերեն</a></li>
+                        <li><a href="{{ url_for('change_language', language='ru') }}">Русский</a></li>
+
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
@@ -220,7 +217,7 @@
                         <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
                             <i class="bi bi-telephone"></i>
                             <h3>{{ _('Call Us') }}</h3>
-                            <p>{{ _('+1 5589 55488 55') }}</p>
+                            <p>{{ _('098044141') }}</p>
                         </div>
                     </div><!-- End Info Item -->
 

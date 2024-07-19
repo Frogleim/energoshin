@@ -10,20 +10,16 @@ app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'translations'
 # Supported languages
 LANGUAGES = {
     'en': 'English',
-    'es': 'Spanish',
-    'fr': 'French',
-    'hy': 'Armenian'
+    'hy': 'Armenian',
+    'ru': 'Russian'
+
 }
 
 
 def get_locale():
-    # Try to guess the language from the user accept
-    # header the browser transmits. The 'best match' function
-    # will find the best matching language.
     return request.cookies.get('language') or request.accept_languages.best_match(LANGUAGES.keys())
 
 
-# Initialize Babel with the locale selector
 babel = Babel(app, locale_selector=get_locale)
 
 
@@ -34,6 +30,7 @@ def index():
 
 @app.route('/change_language/<language>')
 def change_language(language=None):
+    print(language)
     response = redirect(request.referrer)
     if language not in LANGUAGES.keys():
         language = 'en'
