@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>{{ _('Energoshin') }}</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{{url_for( 'static', filename='assets/img/favicon.png')}}" rel="icon">
+    <link href="{{url_for( 'static', filename='assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="{{url_for('static', filename='assets/css/main.css')}}" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Day
+    * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
+    * Updated: Jun 29 2024 with Bootstrap v5.3.3
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header fixed-top">
+
+        <div class="topbar d-flex align-items-center">
+            <div class="container d-flex justify-content-center justify-content-md-between">
+                <div class="contact-info d-flex align-items-center">
+                    <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:energoshin@gmail.com">energoshin@gmail.com</a></i>
+                    <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+                </div>
+                <div class="social-links d-none d-md-flex align-items-center">
+                    <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div><!-- End Top Bar -->
+
+        <div class="branding d-flex align-items-center">
+
+            <div class="container position-relative d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <!-- Uncomment the line below if you also wish to use an image logo -->
+                    <!-- <img src="assets/img/logo.png" alt=""> -->
+                    <h1 class="sitename">{{ _('Energoshin Ltd') }}</h1>
+                </a>
+
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li><a href="#hero" class="active">{{ _('Home') }}</a></li>
+                        <li><a href="#about">{{ _('About') }}</a></li>
+                        <li><a href="#services">{{ _('Services') }}</a></li>
+                        <li><a href="#contact">{{ _('Contact') }}</a></li>
+                        <!-- Language Switcher Buttons -->
+                        <li><a href="{{ url_for('change_language', language='en') }}">English</a></li>
+                        <li><a href="{{ url_for('change_language', language='hy') }}">Հայերեն</a></li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background">
+
+            <img src="{{url_for('static', filename='assets/img/hero.jpg')}}" alt="" data-aos="fade-in">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row justify-content-start">
+                    <div class="col-lg-8">
+                        <h2>{{ _('Energoshin Ltd') }}</h2>
+                        <a href="#about" class="btn-get-started">{{ _('Get Started') }}</a>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- /Hero Section -->
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <span>{{ _('About Us') }}<br></span>
+                <h2>{{ _('About Us') }}<br></h2>
+                <p>{{ _('Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit') }}</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+                        <img src="{{ url_for('static', filename='assets/img/man.jpg') }}" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
+                        <h3>{{ _('Voluptatem dignissimos provident quasi corporis') }}</h3>
+                        <p class="fst-italic">
+                            {{ _('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.') }}
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i> <span>{{ _('Ullamco laboris nisi ut aliquip ex ea commodo consequat.') }}</span></li>
+                            <li><i class="bi bi-check-circle"></i> <span>{{ _('Duis aute irure dolor in reprehenderit in voluptate velit.') }}</span></li>
+                            <li><i class="bi bi-check-circle"></i> <span>{{ _('Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.') }}</span></li>
+                        </ul>
+                        <a href="#" class="read-more"><span>{{ _('Read More') }}</span><i class="bi bi-arrow-right"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /About Section -->
+        <!-- Services Section -->
+        <section id="services" class="services section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <span>{{ _('Services') }}</span>
+                <h2>{{ _('Services') }}</h2>
+                <p>{{ _('We offer the following services') }}</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-item  position-relative">
+                            <div class="icon">
+                                <i class="bi bi-activity"></i>
+                            </div>
+                            <a href="#" class="stretched-link">
+                                <h3>{{ _('Power Supply') }}</h3>
+                            </a>
+                            <p>{{ _('Electricity supply for public and residential buildings') }}</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-broadcast"></i>
+                            </div>
+                            <a href="#" class="stretched-link">
+                                <h3>{{ _('Technical Service') }}</h3>
+                            </a>
+                            <p>{{ _('Technical maintenance, installation, construction, and reconstruction of substations') }}</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-bounding-box-circles"></i>
+                            </div>
+                            <a href="#" class="stretched-link">
+                                <h3>{{ _('Wiring') }}</h3>
+                            </a>
+                            <p>{{ _('Installation, restoration, relocation, laboratory testing, and installation of electrical panels for cable lines') }}</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section><!-- /Services Section -->
+
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <span>{{ _('Contact') }}</span>
+                <h2>{{ _('Contact') }}</h2>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-6">
+                        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+                            <i class="bi bi-geo-alt"></i>
+                            <h3>{{ _('Address') }}</h3>
+                            <p>{{ _('A.Babajanian Street 59 apt. 40, Yerevan, TIN 013043992') }}</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+                            <i class="bi bi-telephone"></i>
+                            <h3>{{ _('Call Us') }}</h3>
+                            <p>{{ _('+1 5589 55488 55') }}</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+                            <i class="bi bi-envelope"></i>
+                            <h3>{{ _('Email Us') }}</h3>
+                            <p>{{ _('energoshin@gmail.com') }}</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                </div>
+
+                <div class="row gy-4 mt-1">
+
+                    <div class="col-lg-6">
+                        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+                            <div class="row gy-4">
+
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="{{ _('Your Name') }}" required="">
+                                </div>
+
+                                <div class="col-md-6 ">
+                                    <input type="email" class="form-control" name="email" placeholder="{{ _('Your Email') }}" required="">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" name="subject" placeholder="{{ _('Subject') }}" required="">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <textarea class="form-control" name="message" rows="6" placeholder="{{ _('Message') }}" required=""></textarea>
+                                </div>
+
+                                <div class="col-md-12 text-center">
+                                    <div class="loading">{{ _('Loading') }}</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">{{ _('Your message has been sent. Thank you!') }}</div>
+
+                                    <button type="submit">{{ _('Send Message') }}</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div><!-- End Contact Form -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Contact Section -->
+
+    </main>
+
+
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="{{url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/vendor/php-email-form/validate.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/vendor/aos/aos.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+
+    <!-- Main JS File -->
+    <script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+
+</body>
+
+</html>
