@@ -23,6 +23,48 @@ msgstr "Սկսել"
 msgid "About Us"
 msgstr "Մեր մասին"
 
+msgid "We provide electricity supply services to leading organizations in the market throughout the entire territory of the Republic of Armenia. The extensive experience of our qualified specialists guarantees the high quality of the services we offer."
+msgstr "Մենք մատուցում ենք էլեկտրամատակարարման ծառայություններ շուկայի առաջատար կազմակերպություններին՝ ՀՀ-ի ողջ տարածքում։ Մեր որակավորված մասնագետների բազմամյա փորձը երաշխավորում է մեր կողմից մատուցվող ծառայությունների բարձր որակը։"
+
+msgid "Our Partners"
+msgstr "Մեր գործընկերներն են"
+
+
+
+msgid "Cascade Energy Service LLC"
+msgstr "Կասկադ Էներգո Սերվիս ՍՊԸ"
+
+msgid "Lus Energy CJSC"
+msgstr "Լույս Էներջի ՓԲԸ"
+
+msgid "AMP Holding LLC"
+msgstr "ԱՄՓ Հոլդինգ ՍՊԸ"
+
+msgid "ML Mining LLC"
+msgstr "ՄԼ Մայնինգ ՍՊԸ"
+
+msgid "RefLabFarm LLC"
+msgstr "ՌեֆԼաբՖարմ ՍՊԸ"
+
+msgid "Masis Tobacco LLC"
+msgstr "Մասիս Տոբակո ՍՊԸ"
+
+msgid "Medline Clinic LLC"
+msgstr "Մեդլայն Կլինիկ ՍՊԸ"
+
+msgid "ARMECONOMBANK OJSC"
+msgstr "Հայէկոնոմբանկ ԲԲԸ"
+
+msgid "ANPP Construction CJSC"
+msgstr "ՀԱԷԿ-ի շինարարություն ՓԲԸ"
+
+msgid "Yerevan Water Users Company"
+msgstr "Երևանի ջրօգտագործողների ընկերություն"
+
+msgid "Gharabaghcyan-Shin LLC"
+msgstr "Ղարաբաղցյան-Շին ՍՊԸ"
+
+
 msgid "We offer the following services"
 msgstr "Մենք մատուցում ենք հետևյալ ծառայությունները"
 
