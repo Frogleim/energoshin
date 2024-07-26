@@ -33,7 +33,7 @@ def change_language(language=None):
     print(language)
     response = redirect(request.referrer)
     if language not in LANGUAGES.keys():
-        language = 'en'
+        language = 'hy'
     response.set_cookie('language', language)
     return response
 

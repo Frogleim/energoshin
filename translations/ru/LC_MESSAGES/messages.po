@@ -153,6 +153,9 @@ msgstr "+1 5589 55488 55"
 msgid "info@example.com"
 msgstr "info@example.com"
 
+msgid "EXPERT CENTER OF THE REPUBLIC OF ARMENIA NGO"
+msgstr "ЭКСПЕРТНЫЙ ЦЕНТР РЕСПУБЛИКИ АРМЕНИЯ НПО"
+
 msgid "Your Name"
 msgstr "Ваше имя"
 
@@ -194,6 +197,8 @@ msgstr "Напишите нам"
 
 msgid "Contact"
 msgstr "Контакты"
+
+
 
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
