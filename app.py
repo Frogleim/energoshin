@@ -1,5 +1,7 @@
 from flask import Flask, request, render_template, redirect
 from flask_babel import Babel, _
+import os, requests
+
 
 app = Flask(__name__)
 
@@ -38,5 +40,17 @@ def change_language(language=None):
     return response
 
 
+def get_ipv4_address():
+    try:
+        eth0_ip = os.getenv('IP_ETH0')
+        print(eth0_ip)
+        ip = '192.168.18.110'
+        return ip
+    except requests.RequestException as e:
+        print(f"Error: {e}")
+        return None
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    ip = get_ipv4_address()
+    app.run(host=ip, debug=True)
