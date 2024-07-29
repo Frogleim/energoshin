@@ -54,4 +54,5 @@ def get_ipv4_address():
 
 if __name__ == '__main__':
     ip = get_ipv4_address()
-    app.run(host=ip, debug=True)
+    TEST_IP = '0.0.0.0'
+    app.run(host=TEST_IP,port=5050, debug=True)
