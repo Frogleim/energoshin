@@ -30,7 +30,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #cc1616; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #cc7616; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -143,7 +143,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #242424;
+  --background-color: #2f7aa7;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --contrast-color: #ffffff;
@@ -163,7 +163,7 @@ h6 {
 
 .header .topbar .contact-info i {
   font-style: normal;
-  color: var(--accent-color);
+  color: #cc7616;
 }
 
 .header .topbar .contact-info i a,
@@ -972,7 +972,7 @@ section,
 .about .content ul i {
   font-size: 1.25rem;
   margin-right: 4px;
-  color: var(--accent-color);
+  color: #cc7616;
 }
 
 .about .content p:last-child {
@@ -1496,7 +1496,7 @@ section,
 
 .contact .info-item i {
   font-size: 20px;
-  color: var(--accent-color);
+  color: #cc7616;
   width: 56px;
   height: 56px;
   font-size: 24px;
@@ -1561,7 +1561,7 @@ section,
 
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: #cc7616;
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;

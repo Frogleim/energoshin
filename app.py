@@ -2,11 +2,10 @@ from flask import Flask, request, render_template, redirect
 from flask_babel import Babel, _
 import os, requests
 
-
 app = Flask(__name__)
 
 # Configuration
-app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.config['BABEL_DEFAULT_LOCALE'] = 'hy'  # Set Armenian as the default language
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'translations'
 
 # Supported languages
@@ -14,12 +13,15 @@ LANGUAGES = {
     'en': 'English',
     'hy': 'Armenian',
     'ru': 'Russian'
-
 }
 
 
 def get_locale():
-    return request.cookies.get('language') or request.accept_languages.best_match(LANGUAGES.keys())
+    # Check if a language is set in cookies, otherwise use the default language
+    language = request.cookies.get('language')
+    if language is not None:
+        return language
+    return request.accept_languages.best_match(LANGUAGES.keys()) or 'hy'
 
 
 babel = Babel(app, locale_selector=get_locale)
@@ -32,7 +34,6 @@ def index():
 
 @app.route('/change_language/<language>')
 def change_language(language=None):
-    print(language)
     response = redirect(request.referrer)
     if language not in LANGUAGES.keys():
         language = 'hy'
