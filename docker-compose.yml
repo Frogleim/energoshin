@@ -3,26 +3,22 @@ version: '3.8'
 services:
   nginx:
     image: nginx:latest
-    container_name: nginx
+    container_name: nginx_reverse_proxy
+    volumes:
+      - ./config/nginx:/etc/nginx/conf.d
+      - ./anime_verse/staticfiles:/staticfiles
+      - ./anime_verse/media:/media
+      - /etc/letsencrypt/live/energoshin.am/fullchain.pem:/etc/ssl/certs/api.crt:ro
+      - /etc/letsencrypt/live/energoshin.am/privkey.pem:/etc/ssl/private/api.key:ro
+
     ports:
       - "80:80"
       - "443:443"
-    volumes:
-      - ./nginx/energoshin.conf:/etc/nginx/conf.d/default.conf
-      - ./certbot/www:/var/www/certbot
-      - ./certbot/conf:/etc/letsencrypt
     depends_on:
       - flask
-    restart: always
+    networks:
+      - shared-net
 
-  certbot:
-    image: certbot/certbot
-    container_name: certbot
-    volumes:
-      - ./certbot/www:/var/www/certbot
-      - ./certbot/conf:/etc/letsencrypt
-    entrypoint: ""
-    command: sleep infinity
 
   flask:
     build:
@@ -36,3 +32,11 @@ services:
     command: flask run --host=0.0.0.0 --port=5000
     expose:
       - "5000"
+    networks:
+      - shared-net
+
+
+networks:
+  shared-net:
+    name: shared-net
+    driver: bridge
