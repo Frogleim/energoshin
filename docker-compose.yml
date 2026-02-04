@@ -5,7 +5,7 @@ services:
     image: nginx:latest
     container_name: nginx_reverse_proxy
     volumes:
-      - ./config/nginx:/etc/nginx/conf.d
+      - ./nginx:/etc/nginx/conf.d
       - ./anime_verse/staticfiles:/staticfiles
       - ./anime_verse/media:/media
       - /etc/letsencrypt/live/energoshin.am/fullchain.pem:/etc/ssl/certs/api.crt:ro
